@@ -21,17 +21,17 @@ const IndividualOccasionpage = () => {
   }
 
   return (
-    <div className='flex flex-col gap-3'>
-        <div className='h-20  shadow-lg flex items-center px-32'>
-                <div className="flex w-[100%] gap-8 justify-end pr-10">
-                  <button className='h-12 w-36 border-2 font-semibold text-red-500 border-red-500 rounded-lg '>Edit Design</button>
-                  <button onClick={handlecart} className='h-12 w-40 bg-red-500 font-semibold text-white rounded-lg'> Add to Basket</button>
+    <div className='flex flex-col gap-5 md:gap-3 lg:gap-3'>
+        <div className='h-20  shadow-lg flex items-center lg:px-32 '>
+                <div className="flex w-[100%] gap-8 px-4 md:justify-end lg:justify-end md:pr-10 lg:pr-10">
+                  <button className='h-10 md:h-12 lg:h-12 w-36 border-2 font-semibold text-red-500 border-red-500 rounded-lg '>Edit Design</button>
+                  <button onClick={handlecart} className='h-10 md:h-12 lg:h-12 w-40 bg-red-500 font-semibold text-white rounded-lg'> Add to Basket</button>
                 </div>
         </div>
-        <div className='flex justify-center items-center  h-[38rem]'>
-          <img className='w-[24rem]' src={cards[selectedImageIndex]}/>
+        <div className='flex justify-center items-center  md:h-[38rem] lg:h-[38rem]'>
+          <img className='w-[293px] md:w-[24rem] lg:w-[24rem]' src={cards[selectedImageIndex]}/>
         </div>
-        <div className='h-38 border-t-2 flex gap-10 justify-center '>
+        <div className='h-38 border-t-2  flex gap-5 md:gap-10 lg:gap-10 px-2 md:px-0 lg:px-0 justify-center '>
           <button onClick={handleleftclick}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
   <path d="M15.41 16.58L10.83 12l4.58-4.58L14 6l-6 6 6 6z"/>
@@ -39,7 +39,7 @@ const IndividualOccasionpage = () => {
           </button>
             <div className='w-[24rem] flex justify-between '>
              {cards.map((item,index)=>
-             <img key={index} onClick={()=> handlethumbnailclick(index)} className={`w-[5rem] ${index==selectedImageIndex ? "border-2 border-red-500":""}`} src={item}/>
+             <img key={index} onClick={()=> handlethumbnailclick(index)} className={`w-[46px] md:w-[5rem] lg:w-[5rem] ${index==selectedImageIndex ? "border-2 border-red-500":""}`} src={item}/>
             )}
             </div>
             <button onClick={handlerightclick}>
